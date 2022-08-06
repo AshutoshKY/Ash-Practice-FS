@@ -1,0 +1,62 @@
+body,
+html {
+    /* width: 100%;
+    height: 100%; */
+    margin: 0;
+    padding: 0;
+    color: #F7E2E2;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    font-weight: 700;
+    background-color: #1B2430;
+}
+
+#mainDiv{
+    margin: 10% 10% 10% 10%;
+    justify-content: center;
+    text-align: center;
+    width: 80%;
+    height: 100%;
+}
+
+#numbers{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 50%;
+    color: aqua;
+    /* background: transparent; */
+    background-color: #0F3D3E;
+    line-height: 2;
+    border-radius: 5px;
+    border: 1px solid palegreen;
+}
+
+::-webkit-input-placeholder {
+    text-align: center;
+  }
+
+/* #sqr{
+    color: aquamarine;
+} */
+
+.square {
+    /* background: aquamarine;
+    color: aqua; */
+    background: #4CACBC;
+    margin: auto ;
+    border: 1px solid pink;
+}
+
+button{
+    margin: 2%;
+    width: 20%;
+    height: 20%;
+    color: black;
+    background-color: #3FA796;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    font-size: 15px;
+    border: 2px solid green;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
