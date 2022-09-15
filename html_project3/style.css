@@ -1,0 +1,130 @@
+body,
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    font-weight: 700;
+    background-color: #e3d6d6;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+#planHead {
+    width: 99.8%;
+    height: 15%;
+    background-image: linear-gradient(to top, #030202, #232323);
+    align-items: center;
+    text-align: center;
+    text-align: center;
+    padding-top: .1%;
+}
+
+#planHead h1{
+   font-family: 'Nabla', cursive;
+   font-size: 2.7vw;
+}
+
+#planet_left {
+    width: 79%;
+    height: 84.5%;
+    float: left;
+    text-align: center;
+    color: rgb(177, 210, 239);
+    padding-top: 0%;
+    font-family: 'Kanit', sans-serif;
+    background-image: url("Images/stars.jpg");
+    font-size: 0.9vw;
+}
+#planet_left h2{
+    color: #bfbebe;
+}
+
+.row{
+    margin-top: 3%;
+}
+#planet_right{
+    width: 20.8%;
+    height: 84.5%;
+    float: left;
+    background-color: #030202;
+    text-align: center;
+    color: aliceblue;
+    border-bottom-right-radius: 200px;
+}
+
+div.images{
+    display: flex;
+    flex-flow: column;
+}
+
+div.images div.row {
+    display: flex;
+    flex-flow: row;
+    padding-top: 1%;
+}
+
+div.images img{
+    width: 10vw;
+    height: 10vw;
+}
+
+.img{
+    margin: auto;
+    padding-bottom: 1%;
+}
+img{
+    border-radius: 50%;
+    /* margin-top: 10%; */
+}
+
+::-webkit-input-placeholder {
+    text-align: center;
+}
+
+input{
+    text-align: center;
+}
+
+#winput{
+    font-family: 'Crete Round', serif;
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.3vw;
+    color: #A6D1E6;
+    margin-top: 60%;
+}
+
+#numbers{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    color: rgb(110, 207, 207);
+    background-color: #3D3C42;
+    border-radius: 5px;
+    border: 1px solid rgb(110, 140, 110);
+}
+
+input[type="text"] {
+    font-size:1vw;
+}
+
+#p1{
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: #FEFBF6;
+    font-size: 1.24vw;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#p2{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #F1F1F1;
+    font-size: 1.45vw;
+    text-decoration: underline 3px #1c7ebb;
+    margin-left: 5%;
+    margin-right: 5%;
+}
