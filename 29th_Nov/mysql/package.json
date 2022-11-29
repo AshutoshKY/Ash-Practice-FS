@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "epxress": "^0.0.1-security",
+    "mysql": "^2.18.1",
+    "node": "^19.1.0"
+  },
+  "name": "mysql",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "AshutoshKY",
+  "license": "ISC",
+  "description": "ClassWork",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AshutoshKY/0964-AshutoshKumar.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AshutoshKY/0964-AshutoshKumar/issues"
+  },
+  "homepage": "https://github.com/AshutoshKY/0964-AshutoshKumar#readme"
+}
