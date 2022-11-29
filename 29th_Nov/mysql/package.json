@@ -2,8 +2,10 @@
   "dependencies": {
     "ejs": "^3.1.8",
     "epxress": "^0.0.1-security",
+    "express": "^4.18.2",
     "mysql": "^2.18.1",
-    "node": "^19.1.0"
+    "node": "^19.1.0",
+    "nodemon": "^2.0.20"
   },
   "name": "mysql",
   "version": "1.0.0",
@@ -14,7 +16,6 @@
   "author": "AshutoshKY",
   "license": "ISC",
   "description": "ClassWork",
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AshutoshKY/0964-AshutoshKumar.git"
