@@ -4,7 +4,7 @@ var mysql = require("mysql");
 const bodyParser=require("body-parser")
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: false }))
-app.use(express.static(__dirname + '/views'));
+// app.use(express.static(__dirname + '/views'));
 
 //Connect MySql Database by crating a variable con which
 //has databse name and other metadata
