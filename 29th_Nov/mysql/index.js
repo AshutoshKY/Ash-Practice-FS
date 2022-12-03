@@ -59,4 +59,4 @@ app.post("/push_data",(req,res)=>{
     });
 });
 
-app.listen(3000);
+app.listen(3002);
