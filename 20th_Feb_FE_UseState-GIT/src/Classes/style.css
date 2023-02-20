@@ -1,0 +1,27 @@
+body,html{
+    width: 100%;
+    height: 100%;
+    background-color: antiquewhite;
+}
+
+.mainHead{
+    width: 100%;
+    height: 10%;
+    text-align: center;
+}
+
+.mainContent{
+    width: 100%;
+    height: 90%;
+    text-align: center;
+}
+
+.btns{
+    padding: 0.4%;
+    margin:0% 0% 1% 1%;
+    border-radius: 50px;
+    border: 2px rgb(125, 111, 53) solid;
+    background-color: rgb(95, 160, 134);
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+}
