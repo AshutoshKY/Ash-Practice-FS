@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+</head>
+
+<body>
+    <div>
+        <div style="text-align: center;">
+            <h1 style="font-size: 100px;">Error</h1>
+        </div>
+        <div style="text-align: center;">
+            <span style="color:red; font-size:30px"><i>
+                    <%= passwordIncorrect %>
+                </i></span>
+            <span style="color:green; font-size:30px"><i>
+                    <%= userNotRegistered %>
+                </i></span>
+        </div>
+        <div style="text-align: center; margin-top:2%">
+            <button onclick="location.href='/login'" style="margin:50px; padding:1%; font-size:20px; border-radius:50px; background-color:aqua ">Go Back</button>
+        </div>
+    </div>
+</body>
+
+</html>

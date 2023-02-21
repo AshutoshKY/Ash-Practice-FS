@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Register-Basics</title>
+</head>
+<body style="background-color:bisque;">
+    <header class="text-gray-600 mt-4 body-font shadow-xl">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0" onclick="location.href='/'">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+            <span class="ml-3 text-xl">BE</span>
+          </a>
+          <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+            <!-- <a class="mr-10 mt-0.5 px-4 py-2 text-lg bg-gray-200 rounded-lg hover:text-gray-900" onclick="location.href='/data'">All Data</a> -->
+          </nav>
+          <button class="inline-flex items-center bg-green-200 border-0 py-2 px-6 focus:outline-none hover:bg-green-400 rounded text-lg mt-4 md:mt-0" onclick="location.href='/login'">Login
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+      </header>
+    <header>
+        <div class="h-fit bg-peach-100 flex justify-center">
+            <div class="py-6 px-8 h-fit w-2/6 mt-40 bg-white rounded-2xl shadow-2xl">
+                <div class="w-full lg:w-12/12 bg-white p-5 rounded-lg lg:rounded-l-none">
+                    <h3 class="pt-4 text-2xl text-center">Create an Account!</h3>
+                    </div>
+                <form class="" action="/register" method="POST">
+                    <div>
+                        <!-- <label for="email" class="block text-gray-800 font-bold">Email:</label> -->
+                        <input type="email" name="emailres" id="email" placeholder="@email" required
+                            class="w-full border border-gray-300 py-2 pl-3 rounded mt-2 outline-none focus:ring-indigo-600 :ring-indigo-600" />
+                    </div>
+                    <div class="mb-6 mt-6">
+                        <!-- <label for="name" class="block text-gray-800 font-bold">Name:</label> -->
+                        <input type="text" name="name" id="name" placeholder="Name" required
+                            class="w-full border border-gray-300 py-2 pl-3 rounded mt-2 outline-none focus:ring-indigo-600 :ring-indigo-600" />
+                    </div>
+                    <div class="mb-6 mt-6">
+                        <!-- <label for="name" class="block text-gray-800 font-bold">Name:</label> -->
+                        <input type="password" name="passres" id="password" placeholder="Pass" required
+                            class="w-full border border-gray-300 py-2 pl-3 rounded mt-2 outline-none focus:ring-indigo-600 :ring-indigo-600" />
+                    </div>
+                    <button
+                        class="cursor-pointer py-2 px-4 block mt-6 bg-indigo-500 text-white font-bold w-full text-center rounded" 
+                        type="submit" name="login" value="login">Register
+                    </button>
+                    <p style="text-align: center; margin-top:10px">or</p>
+                    
+                </form>
+                <button
+                        class="cursor-pointer mx-56  py-2 px-4 block mt-4 bg-orange-500 text-white font-bold w-1/5 text-center rounded-2xl" 
+                        onclick="location.href='/login'">Login
+                    </button>
+                <div style="text-align: center; margin-top: 15px;">
+                <span style="color:rgb(79, 183, 112); font-size:25px; font-weight:600; text-decoration:underline"><i>
+                    <%= userRegistered %>
+                    </i>
+                </span>
+                <span style="color:rgb(248, 123, 123); font-size:25px; font-weight:600; text-decoration:underline"><i>
+                    <%= userNotRegistered %>
+                    </i>
+                </span>
+            </div>
+            </div>
+        </div>
+    </header>
+</body>
+</html>
