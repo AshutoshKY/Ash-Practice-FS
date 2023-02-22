@@ -16,12 +16,26 @@ body,html{
     text-align: center;
 }
 
+.left{
+    float: left;
+    width: 33%;
+}
+
+.right{
+    float: left;
+    width: 33%;
+}
+
 .btns{
-    padding: 0.4%;
-    margin:0% 0% 1% 1%;
+    padding: 0.5%;
+    margin:1% 0% 1% 2%;
     border-radius: 50px;
     border: 2px rgb(125, 111, 53) solid;
     background-color: rgb(95, 160, 134);
     color: rgb(0, 0, 0);
     font-size: 18px;
+}
+
+h2{
+    color:rgb(126, 41, 70);
 }
