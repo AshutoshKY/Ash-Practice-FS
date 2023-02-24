@@ -2,6 +2,7 @@ const express = require('express');
 const mysql = require('mysql');
 const app = express();
 const bodyParser = require('body-parser');
+const session = require('express-session');
 
 const urlcoded = bodyParser.urlencoded({extended:false});
 
@@ -19,6 +20,15 @@ con.connect(function(err){
     if(err) throw err;
     console.log("Connected with Database-MySql");
 });
+
+app.use(session({
+    cookieName: 'session',
+    secret: 'hakunamatata',
+    duration:  10 * 1000,
+    activeDuration: 10 * 1000,
+    resave: true,
+    saveUninitialized: true
+}))
 
 // con.connect(function(err) {
 //     con.query("SELECT * FROM userInfo", function (err, result) {
@@ -43,7 +53,16 @@ app.get("/login", (req,res) => {
 })
 
 app.get("/loginsuccess", (req,res) => {
-    res.render("loginsuccess");
+    // res.render("loginsuccess");
+
+    if(req.session.user&&req.session){
+            var namy=req.session.user;
+            res.render( 'loginsuccess', {username: namy});
+	}
+	else{
+		console.log('Login again!!');
+		res.render('login');
+	}
 })
 
 app.get("/register", (req,res) => {
@@ -61,7 +80,9 @@ app.post("/login", urlcoded ,(req,res) => {
 		}
         if(results.length > 0){
             if(results[0].password==pass){
-                console.log("Login Successful");
+                var userlgin = {email:results[0].email, name:results[0].name};
+                req.session.user=userlgin;
+                console.log("Login Successful of ->", req.session.user);
                 res.redirect('/loginsuccess');
             }else{
                 console.log("Password Incorrect");
@@ -72,6 +93,18 @@ app.post("/login", urlcoded ,(req,res) => {
 				res.render( 'error404', { userNotRegistered: 'User Not Registered', passwordIncorrect: ' '});
         }
     })
+})
+
+app.get('/logout', (req,res) => {
+    // const time = req.session.duration;
+    // setTimeout(() => {
+    req.session.destroy((err) => {
+        if(err) throw err;
+        console.log("Session destroyed");
+        res.redirect('/login');
+        console.log("Logout Success");
+    })
+    // }, time);
 })
 
 app.post("/register", urlcoded ,(req,res) => {

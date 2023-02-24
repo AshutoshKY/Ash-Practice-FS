@@ -11,7 +11,11 @@
         <h1 style="font-size: 100px;">Logged In</h1>
     </div>
     <div style="text-align: center;">
-        <button onclick="location.href='/login'" style="margin:50px; padding:1%; font-size:20px; border-radius:50px; background-color:aqua ">Go Back</button>
+        <h2> Hi, <%= username.name %> , Welcome Back!!</h2>
+        <h3> Your Email is - <%= username.name %> </h3>
+    </div>
+    <div style="text-align: center;">
+        <button onclick="location.href='/logout'" style="margin:50px; padding:1%; font-size:20px; border-radius:50px; background-color:aqua ">Logout</button>
     </div>
 </body>
 </html>
