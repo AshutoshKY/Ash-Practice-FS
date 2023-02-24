@@ -53,9 +53,15 @@
                     
                 </form>
                 <button
-                        class="cursor-pointer mx-56  py-2 px-4 block mt-4 bg-orange-500 text-white font-bold w-1/5 text-center rounded-2xl" 
+                        class="cursor-pointer mx-64  py-2 px-4 block mt-4 bg-orange-500 text-white font-bold w-1/5 text-center rounded-2xl" 
                         type="submit" name="login" value="login" onclick="location.href='/register'">Register
                     </button>
+                    <div style="text-align: center; margin-top: 15px;">
+                      <span style="color:rgb(221, 22, 22); font-size:25px; font-weight:600; text-decoration:underline"><i>
+                          <%= loginexpired %>
+                          </i>
+                      </span>
+                  </div>
             </div>
         </div>
     </header>

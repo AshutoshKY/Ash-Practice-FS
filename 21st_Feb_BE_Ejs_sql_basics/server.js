@@ -3,6 +3,7 @@ const mysql = require('mysql');
 const app = express();
 const bodyParser = require('body-parser');
 const session = require('express-session');
+const store = new session.MemoryStore();
 
 const urlcoded = bodyParser.urlencoded({extended:false});
 
@@ -24,10 +25,13 @@ con.connect(function(err){
 app.use(session({
     cookieName: 'session',
     secret: 'hakunamatata',
-    duration:  10 * 1000,
-    activeDuration: 10 * 1000,
+    cookie: {secure:false,
+            maxAge:6000
+        },
     resave: true,
-    saveUninitialized: true
+    saveUninitialized: true,
+    secure:true,
+    store
 }))
 
 // con.connect(function(err) {
@@ -46,10 +50,18 @@ app.get('/data', (req,res) => {
 
 app.get("/", (req,res) => {
     res.render("home");
+    console.log("Session ID is -", req.sessionID);
+})
+
+app.get('/sample', (req,res) => {
+    res.render("sample");
 })
 
 app.get("/login", (req,res) => {
-    res.render("login");
+    res.render("login", {loginexpired:' '});
+    console.log("Session ID is -", req.sessionID);
+    console.log("Session User is -", req.session.user);
+    console.log("Session Store - ", store);
 })
 
 app.get("/loginsuccess", (req,res) => {
@@ -60,8 +72,8 @@ app.get("/loginsuccess", (req,res) => {
             res.render( 'loginsuccess', {username: namy});
 	}
 	else{
-		console.log('Login again!!');
-		res.render('login');
+		console.log('Login Expired!!');
+		res.render('login', {loginexpired:'Login Expired '+' , '+'Login Again!!'});
 	}
 })
 
@@ -82,8 +94,11 @@ app.post("/login", urlcoded ,(req,res) => {
             if(results[0].password==pass){
                 var userlgin = {email:results[0].email, name:results[0].name};
                 req.session.user=userlgin;
-                console.log("Login Successful of ->", req.session.user);
+                console.log("Login Successful of ->", req.session.user, "Session ID is -", req.sessionID);
+                console.log("Session User is -", req.session.user);
+                console.log("Session Store - ", store);
                 res.redirect('/loginsuccess');
+                // res.json(req.session);
             }else{
                 console.log("Password Incorrect");
                 res.render('error404', {passwordIncorrect:'Password Incorrect', userNotRegistered: ' ',});
@@ -98,12 +113,19 @@ app.post("/login", urlcoded ,(req,res) => {
 app.get('/logout', (req,res) => {
     // const time = req.session.duration;
     // setTimeout(() => {
+    console.log("Session ID is -", req.sessionID);
+
     req.session.destroy((err) => {
         if(err) throw err;
+        // console.log("Session ID is -", req.sessionID);
         console.log("Session destroyed");
+        // console.log("Session ID is -", req.sessionID);
         res.redirect('/login');
         console.log("Logout Success");
+        // console.log("Session ID is -", req.sessionID);
     })
+    console.log("Session ID is -", req.sessionID);
+
     // }, time);
 })
 

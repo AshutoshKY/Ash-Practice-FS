@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>User_LoggedIN</title>
 </head>
 <body>
@@ -11,8 +12,8 @@
         <h1 style="font-size: 100px;">Logged In</h1>
     </div>
     <div style="text-align: center;">
-        <h2> Hi, <%= username.name %> , Welcome Back!!</h2>
-        <h3> Your Email is - <%= username.name %> </h3>
+        <h2> Hi, <i style="text-decoration: underline; font-size:30px"><%= username.name %></i> , Welcome Back!!</h2>
+        <h2> Your Email is - <i style="text-decoration: underline; font-size:30px"><%= username.email %></i> </h2>
     </div>
     <div style="text-align: center;">
         <button onclick="location.href='/logout'" style="margin:50px; padding:1%; font-size:20px; border-radius:50px; background-color:aqua ">Logout</button>
