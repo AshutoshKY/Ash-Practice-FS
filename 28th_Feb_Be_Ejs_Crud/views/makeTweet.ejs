@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Sasta_Tweeter</title>
+</head>
+
+<body>
+    <header class="text-gray-900 body-font py-4 shadow-xl bg-gray-100">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <nav class="flex lg:w-2/5 flex-wrap items-center text-xl md:ml-auto">
+          </nav>
+          <a class="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-4 md:mb-0" onclick="location.href='/'">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+            <span class="ml-3 text-2xl">Sasta_Twitter</span>
+          </a>
+          <div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
+            <button class="flex mx-8 my-0 text-gray-900 bg-blue-400 border-2 py-2 px-4 focus:outline-none hover:bg-blue-500 rounded-2xl text-xl " onclick="location.href='/'">Home</button>
+          </div>
+        </div>
+      </header>
+    <div>
+        <br><br>
+        <br>
+        <br>
+
+        <div class="max-w-screen-md mx-auto p-5">
+            <div class="text-center mb-16">
+                <h3 class="text-3xl sm:text-4xl leading-normal font-extrabold tracking-tight text-gray-900">
+                    Do the <span class="text-indigo-600">Sasta Tweet</span>
+                </h3>
+            </div>
+            <form action="/tweetPost" method="POST">
+                <div class="flex flex-wrap -mx-3 mb-6">
+                    <div class="w-full ml-40 md:w-1/2 text-center px-3 mb-6 md:mb-0">
+                        <label class="block uppercase tracking-wide text-gray-700 text-lg font-bold mb-2"
+                            for="grid-first-name">
+                            Name
+                        </label>
+                        <input
+                            class="appearance-none bg-transparent border-b text-center border-indigo-500 w-full text-gray-700 mr-3 p-4 leading-tight focus:outline-none focus:bg-gray-200"
+                            type="text" placeholder="User Name" name="createduser" required aria-label="Full name">
+                    </div>
+                </div>
+                <div class="flex flex-wrap -mx-3 mb-6">
+                    <div class="w-full px-3">
+                        <label
+                            class="block uppercase tracking-wide mr-12 text-center text-gray-700 text-lg font-bold mb-2"
+                            for="grid-password">
+                            Title
+                        </label>
+                        <input
+                            class="appearance-none bg-transparent border-b text-center border-indigo-500 w-full text-gray-700 mr-3 p-4 leading-tight focus:outline-none focus:bg-gray-200"
+                            type="text" placeholder="" name="title" required aria-label="Full name">
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap -mx-3 mb-6">
+                    <div class="w-full px-3">
+                        <label class="block uppercase tracking-wide text-gray-700 text-lg font-bold mb-2"
+                            for="grid-password">
+                            Your Sasta Tweet
+                        </label>
+                        <textarea rows="10"
+                            class="appearance-none bg-transparent border-b border-indigo-500 w-full text-gray-700 mr-3 p-4 focus:bg-gray-100 leading-tight focus:outline-none"
+                            type="text" placeholder="Your Tweet" name="body" required aria-label="Full name">
+                        </textarea>
+                    </div>
+                    <div class="flex justify-between w-full px-3">
+                        <button
+                            class="shadow bg-indigo-600 hover:bg-indigo-400 mt-8 mx-80 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-6 rounded"
+                            type="submit">
+                            Send It!!
+                        </button>
+                    </div>
+
+                </div>
+
+            </form>
+            <h1 class="text-3xl sm:text-3xl leading-normal text-center underline font-extrabold tracking-tight text-green-400"><%= tweet %></h1>
+
+        </div>
+    </div>
+</body>
+
+</html>
