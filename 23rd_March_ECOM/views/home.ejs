@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Homepage</title>
+    <style>
+      .box{
+        height:200px;
+        width:200px;
+        border:2px solid crimson;
+      }
+      .pr{
+        text-decoration: line-through;
+      }
+    </style>
+  </head>
+  <body>
+    <% results.forEach((result)=>{ %>
+    <div class="box">
+      <center>
+      <a href="details/<%=result.id%>"><h3><%=result.name%></h3></a>
+      <h4><%=result.type%></h4>
+      <span class="pr"><b><%=result.price%></b></span>
+      <span><b><%=result.sale_price%></b></span><br>
+      <a href="#"><button type="button" >Add to Cart</button></a>
+      <a href="checkout/<%=result.id%>"><button type="button" >BuyNow</button></a>
+<center>
+    </div>
+    <br>
+<%})%>
+  </body>
+</html>
